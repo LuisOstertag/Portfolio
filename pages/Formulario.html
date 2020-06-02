@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiPag</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+</head>
+<body>
+   <h1>Conoce tu destino</h1> 
+   <p>Nombre y Apellido</p>
+   <input id= "Nombre" type="Nombre">
+   <input id= "Apellido" type="Apellido">
+   <br>
+   <p>Signo de sodiaco</p>
+   <input  id= "Sodiaco" type="Sodiaco">
+   <button id="Predecir" onclick="Predecir()">Predecir</button>
+   <br>
+   <h3 id="Resultado"></h3>
+    <br><br>
+    <div >
+        <a href="../index.html"><button >PAGINA PRINSIPAL</button></a>  
+    </div>
+    
+
+
+   <script>
+       function Predecir(){
+           var Nombre = document.getElementById("Nombre").value;
+           var Apellido = document.getElementById("Apellido").value;
+           var Sodiaco = document.getElementById("Sodiaco").value;
+        
+        document.getElementById("Resultado").innerHTML = "Presta mucha atencion " + Nombre + " " + Apellido + 
+        ", tu destino esta escrito en el universo y el signo de " + Sodiaco + " predice que este mes vas a estar en cuarentena"}
+        
+   </script>
+    
+</body>
+</html>

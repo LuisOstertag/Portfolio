@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIVIA</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+
+<body>
+    
+    
+    <!--PREGUNTAS-->
+
+    <div>
+      
+        <h1>Quien es TRUENO?</h1>
+        <div>
+            <label ><input type="radio" name="Pre1" onclick="pregunta1();">Un rapero</label>
+            <label ><input type="radio" name="Pre1" onclick="pregunta1();">Un tenista</label>
+            <label><input type="radio" name="Pre1" onclick="pregunta1();">Un futbolista</label>  
+        </div> 
+    </div>
+
+
+    <div>
+        <h1>Quien es el campeon internaciol de Red Bull</h1>
+        <div>
+            <label ><input type="radio" name="Pre2" onclick="pregunta2();">Bnet</label>
+            <label ><input type="radio" name="Pre2" onclick="pregunta2();">Chuty</label>
+            <label ><input type="radio" name="Pre2" onclick="pregunta2();">MKS</label> 
+
+        </div> 
+    </div>
+
+  <div >
+    
+    <h1>A quien se lo conoce como rey del doble-tempo</h1>
+    <div>
+        <label ><input type="radio" name="Pre3" onclick="pregunta3();">Detoke</label>
+        <label ><input type="radio" name="Pre3" onclick="pregunta3();">Wos</label>
+        <label ><input type="radio" name="Pre3" onclick="pregunta_3();">Codigo</label> 
+
+    </div> 
+</div>
+
+ 
+    <div >
+        <h1>Que significa FMS</h1>
+
+        <div>
+            <label><input type="radio" name="Pre4" onclick="pregunta4();">Feria maestra superma</label>
+            <label><input type="radio" name="Pre4" onclick="pregunta4();">Freestyle Master Series</label>
+            <label><input type="radio" name="Pre4" onclick="pregunta4();">Famosos maestros seriales</label> 
+        </div> 
+    </div>
+
+</div>
+ 
+ <div >
+    <h1>En las batallas de rap que significa FLow</h1>
+
+    <div>
+        <label ><input type="radio" name="Pre5" onclick="pregunta5();">feo</label>
+        <label ><input type="radio" name="Pre5" onclick="pregunta5();">fundir</label>
+        <label ><input type="radio" name="Pre5" onclick="pregunta5();">fluir</label> 
+ 
+    </div> 
+</div>
+
+
+<div>
+    <button onclick="Resultado()">Resultado</button>
+</div>
+ <br><br>
+
+<div >
+    <a href="../index.html"><button >PAGINA PRINSIPAL</button></a>  
+</div>
+
+</body>
+<script>
+
+var contador = 0;
+    
+        //RESPUESTAS
+        function pregunta1 (){
+            var respuesta1 = document.getElementsByName("Pre1");
+
+            if(respuesta1[0].checked){
+                contador = contador + 1;
+            }
+     
+        }
+
+  
+   function pregunta2(){
+            var respuesta2 = document.getElementsByName("Pre2");
+
+            if(respuesta2[0].checked){
+                contador = contador + 1;
+            }
+      
+        }
+
+
+    
+    
+        function pregunta_3(){
+            var respuesta3 = document.getElementsByName("Pre3");
+
+            if(respuesta3[2].checked){
+                contador = contador + 1;
+            }
+        
+        }
+    
+         function pregunta4(){
+            var respuesta4 = document.getElementsByName("Pre4");
+
+            if(respuesta4[1].checked){
+                contador = contador + 1;
+            }
+        
+          
+        }
+
+
+       
+   
+        function pregunta5(){
+            var respuesta5 = document.getElementsByName("Pre5");
+
+            if(respuesta5[2].checked){
+                contador = contador + 1;
+            }
+           
+        }
+        
+    
+      function Resultado(){
+               alert("Respondistes" + contador + " bien");
+        }
+    
+
+
+</script>
+</head>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOTON</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+</head>
+<body>
+    <div >
+        <div >
+            <h1>Crea tus propios beat</h1>
+            <div>
+                <br><a onmousedown="BOMBO.play()"><button> BOMBO </button></a>
+            </div>
+            <div>
+                <br><a  onmousedown="KICK.play()"><button> KICK </button></a>
+            </div>
+            <div >
+                <br><a  onclick="HIT.play()" ><button >HIT-HAT</button></a>
+             
+            </div>
+            <div >
+                <br><a  onclick="PIANO.play()" ><button >PIANO</button></a>
+            </div>
+            <br>
+            <div >
+                <a href="../index.html"><button >PAGINA PRINSIPAL</button></a>  
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <script>
+        var BOMBO = new Audio();
+        BOMBO.src = "../sonidos/bombo1.mp3";
+        var KICK = new Audio();
+        KICK.src = "../sonidos/kick_5.wav";
+        var HIT = new Audio();
+        HIT.src = "../sonidos/hit-hat.mp3";
+        var PIANO = new Audio();
+        PIANO.src = "../sonidos/piano-lento.mp3"
+    </script>
+</body>
+</html>

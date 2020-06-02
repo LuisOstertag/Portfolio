@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiPag</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+</head>
+<body>
+  <h1> Bienvenido al calcular de creditos Luis Ostertag</h1> 
+
+  <h2>Esta calculadora le mostrar de que monton seran las cuotas del credito que quiere obtener</h2><br>
+    
+  <h3>Coloque el monto del credito que quiere optener</h3>
+    <input type="text"  id="monto"><br><br>
+
+     <h3>Coloque la cantidad de cuotas </h3>
+    <input type="text" id="cuotas"><br><br>
+  
+    <h3>Coloque el monto de su resivo de sueldo</h3>
+    <input type="text" id="resivo"><br><br>
+
+
+    <input type="button" name="nombre" value="Calculo del credito" onclick="Calcular();">
+    </div>
+
+
+ <br><p><h4>Calculo: <span id="salida"></h4></span></p>
+
+ <br><br>
+ <div >
+    <a href="../index.html"><button >PAGINA PRINSIPAL</button></a>  
+</div>
+
+
+ <script>
+
+      function Calcular()
+    {
+        var monto1=parseInt(document.getElementById("monto").value);
+        var cuotas1=parseInt(document.getElementById("cuotas").value);
+        var resivo1=parseInt(document.getElementById("resivo").value);
+
+
+//calculo del credito y las cuotas
+        var interes = monto1 * 0.5;
+        var creditototal = monto1 + interes
+        var montocuota = creditototal/cuotas1
+
+      
+//calculo del limite del resivo
+ var limite = resivo1 * 35 / 100  
+ 
+ var hola = montocuota;
+ var chau = limite;
+
+    if (montocuota < limite ){
+
+        document.getElementById("salida").innerHTML = ( "la cantidad de cuotas es " + cuotas1 + " cada cuota con un monto de $" + montocuota);
+    }else{
+
+        document.getElementById("salida").innerHTML = (" El monto de su resivo es insuficiente para adquirir el prestamos deseado");
+    }
+
+    
+    }
+
+</script>
+  
+</body>
+    
+</html>
